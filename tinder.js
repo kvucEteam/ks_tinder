@@ -72,8 +72,8 @@ function generateHTML() {
     //alert(jsonData.length);
 
     for (var i = 0; i < jsonData.length; i++) {
-        $(".tinder_container").append("<div class='text_container tinder_card card_" + i + "'></div>");
-        $(".tinder_card").eq(i).html("<p class='card_header'>Nøgleproblem: (" + i + ") " + jsonData[i].Nogleproblem + "</p><p class='card_text'>''" + jsonData[i].Draggabletext + "''</p><div class='txt_vurdering'></div>");
+        $(".tinder_container").append("<div class='text_container tinder_card card_" + i + " textHolder'></div>");
+        $(".tinder_card").eq(i).html("<p class='card_header'>Nøgleproblem: " + jsonData[i].Nogleproblem + "</p><p class='card_text'>''" + jsonData[i].Draggabletext + "''</p><div class='txt_vurdering'></div>");
         $(".tinder_card").eq(i).css("z-index", 20 - i);
         $(".tinder_card").eq(i).css("margin-top", i * 7);
         if (i > 4) {
@@ -131,20 +131,22 @@ function makeDraggable() {
 }
 
 function feedback(ui) {
-console.log("Runde: " + runde +", Korrekt: " +jsonData[runde].Korrekt +", " + user_select);    
-    if (jsonData[runde].Korrekt === true) {
-        UserMsgBox("body", "<h4>" + jsonData[runde].Draggabletext + "<br/> er en<span class='label label-success'>God problemformulering</span></h4><p class='svar'></p><br>Hvorfor den er god:<p>" + jsonData[runde].Feedback + "</p>");
-    } else if (jsonData[runde].Korrekt === false) {
-        UserMsgBox("body", "<h4>" + jsonData[runde].Draggabletext + "<br/> er en<span class='label label-danger'>Dårlig problemformulering</span></h4><p class='svar'></p><br>Hvorfor den er dårlig:<p>" + jsonData[runde].Feedback + "</p>");
 
-    }
     if (jsonData[runde].Korrekt == user_select) {
-        $(".svar").html("Du svarede rigtigt.");
+        var svar_type = "<span class='label label-success'>Rigtigt</span>"; //$(".svar").html("Du svarede rigtigt.");
         correct_sound();
     } else if (jsonData[runde].Korrekt != user_select) {
-        $(".svar").html("Du svarede forkert.");
+        var svar_type = "<span class='label label-danger'>Forkert</span>"; //$(".svar").html("Du svarede forkert.");
         error_sound();
     }
+    console.log("Runde: " + runde + ", Korrekt: " + jsonData[runde].Korrekt + ", " + user_select);
+    if (jsonData[runde].Korrekt === true) {
+        UserMsgBox("body", "<h3>Du svarede " + svar_type + "</h3><p>'" + jsonData[runde].Draggabletext + "' <br/><br/>Problemformuleringen er  <span style='font-size:14px; font-weight:100' class='label label-success'>God</span></p><h4>Hvorfor den er god:</h4><p>" + jsonData[runde].Feedback + "</p>");
+    } else if (jsonData[runde].Korrekt === false) {
+        UserMsgBox("body", "<h3>Du svarede " + svar_type + "</h3><p>'" + jsonData[runde].Draggabletext + "' <br/><br/>Problemformuleringen er  <span style='font-size:14px; font-weight:100' class='label label-danger'>Dårlig</span></p><h4>Hvorfor den er dårlig:</h4><p>" + jsonData[runde].Feedback + "</p>");
+
+    }
+
 
     $(".tinder_card").eq(0).remove();
     runde++;
@@ -170,11 +172,11 @@ function btn_click(class_type) {
 
 
     if (class_type == "btn_no") {
-           user_select = false;
+        user_select = false;
         var rotate = -6;
         var pos = "-=1800";
     } else if (class_type == "btn_yes") {
-           user_select = true;
+        user_select = true;
 
         var rotate = 6;
         var pos = "+=1800";

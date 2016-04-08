@@ -47,7 +47,7 @@ h1{
 
 .knap_container {
     float: left;
-    margin-top: 420px;
+    margin-top: 410px;
     text-align: center;
     width: 100%;
     background-color: transparent;
@@ -55,11 +55,10 @@ h1{
 }
 
 .btn_tinder {
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-top: 7px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 9px;
     padding-bottom: 0px;
-    
     font-size: 3em;
 }
 
@@ -113,10 +112,10 @@ h1{
 
 @media (min-width: 768px) {
     .card_header {
-        font-size: 20px;
+        font-size: 18px;
     }
     .card_text {
-        font-size: 30px;
+        font-size: 24px;
         padding-right: 40px;
         font-weight: 200;
     }
