@@ -6,6 +6,8 @@ var hovering = false;
 
 $(document).ready(function() {
 
+    enable_audio();
+
     //console.log(JSON.stringify(jsonData));
     //  console.log(jsonData[0].Korrekt);
 
@@ -13,7 +15,7 @@ $(document).ready(function() {
     makeDraggable();
 
     $(".btn_no, .btn_yes").click(function() {
-        var class_type = $(this).attr("class").split(' ')[3];
+        var class_type = $(this).attr("class").split(' ')[4];
         btn_click(class_type);
     });
 
@@ -56,10 +58,10 @@ $(document).ready(function() {
 
             if (dropclass == "dropzone_no") {
                 $(".txt_vurdering").eq(0).css("opacity", 1);
-                $(".txt_vurdering").eq(0).html("IKKE GOD").css("border", "solid 3px red").css("color", "red");
+                $(".txt_vurdering").eq(0).html("<span class='label label-danger'>Dårlig problemformulering</span>");
             } else if (dropclass == "dropzone_yes") {
                 $(".txt_vurdering").eq(0).css("opacity", 1);
-                $(".txt_vurdering").eq(0).html("GOD").css("border", "solid 3px green").css("color", "green");
+                $(".txt_vurdering").eq(0).html("<span class='label label-success'>God problemformulering</span>");
             }
         }
     });
@@ -71,7 +73,7 @@ function generateHTML() {
 
     for (var i = 0; i < jsonData.length; i++) {
         $(".tinder_container").append("<div class='text_container tinder_card card_" + i + "'></div>");
-        $(".tinder_card").eq(i).html("<p class='card_header'>Nøgleproblem: (" + i + ") " + jsonData[i].Nogleproblem + "</p><p class='card_text'>''" + jsonData[i].Draggabletext + "''</p><div class='txt_vurdering'>GOD</div>");
+        $(".tinder_card").eq(i).html("<p class='card_header'>Nøgleproblem: (" + i + ") " + jsonData[i].Nogleproblem + "</p><p class='card_text'>''" + jsonData[i].Draggabletext + "''</p><div class='txt_vurdering'></div>");
         $(".tinder_card").eq(i).css("z-index", 20 - i);
         $(".tinder_card").eq(i).css("margin-top", i * 7);
         if (i > 4) {
@@ -81,7 +83,7 @@ function generateHTML() {
     $(".knap_container").css("z-index", 1);
     $(".txt_vurdering").css("opacity", 0);
 
-    $(".tinder_container").append('<div class="knap_container hidden-xs hidden-sm col-md-12"><div class="btn_tinder btn btn-info btn_no"><span class="glyphicon glyphicon-remove"></span></div><div class="btn_tinder btn btn-info btn_yes"><span class="glyphicon glyphicon-heart"></span></div></div>');
+    $(".tinder_container").append('<div class="knap_container hidden-xs hidden-sm col-md-12"><div class="btn_tinder btn-lg btn btn-info btn_no"><span class="glyphicon glyphicon-remove"></span></div><div class="btn_tinder btn btn-info btn-lg btn_yes"><span class="glyphicon glyphicon-heart"></span></div></div>');
 
 };
 
@@ -129,18 +131,23 @@ function makeDraggable() {
 }
 
 function feedback(ui) {
+console.log("Runde: " + runde +", Korrekt: " +jsonData[runde].Korrekt +", " + user_select);    
     if (jsonData[runde].Korrekt === true) {
-        var korrekt = "god";
+        UserMsgBox("body", "<h4>" + jsonData[runde].Draggabletext + "<br/> er en<span class='label label-success'>God problemformulering</span></h4><p class='svar'></p><br>Hvorfor den er god:<p>" + jsonData[runde].Feedback + "</p>");
     } else if (jsonData[runde].Korrekt === false) {
-        var korrekt = "dårlig";
+        UserMsgBox("body", "<h4>" + jsonData[runde].Draggabletext + "<br/> er en<span class='label label-danger'>Dårlig problemformulering</span></h4><p class='svar'></p><br>Hvorfor den er dårlig:<p>" + jsonData[runde].Feedback + "</p>");
+
     }
     if (jsonData[runde].Korrekt == user_select) {
-        UserMsgBox("body", "<h3>Der er et <span class='label label-success'>Match</span> </h3><p>" + jsonData[runde].Draggabletext + "<br/> Er en " + korrekt + " problemformulering.</p><h3> Feedback:</h3><p>" + jsonData[runde].Feedback + "</p>");
+        $(".svar").html("Du svarede rigtigt.");
+        correct_sound();
     } else if (jsonData[runde].Korrekt != user_select) {
-        UserMsgBox("body", "<h3>Der er <span class='label label-danger'>ikke noget Match</span> </h3><p>" + jsonData[runde].Draggabletext + "<br/> Er en " + korrekt + " problemformulering.</p><h3> Feedback:</h3><p>" + jsonData[runde].Feedback + "</p>");
+        $(".svar").html("Du svarede forkert.");
+        error_sound();
     }
 
     $(".tinder_card").eq(0).remove();
+    runde++;
     //generateHTML();
     //makeDraggable();
     updateStack();
@@ -160,12 +167,17 @@ function updateStack() {
 
 function btn_click(class_type) {
 
+
+
     if (class_type == "btn_no") {
+           user_select = false;
         var rotate = -6;
-        var pos = "-=2400";
+        var pos = "-=1800";
     } else if (class_type == "btn_yes") {
+           user_select = true;
+
         var rotate = 6;
-        var pos = "+=2400";
+        var pos = "+=1800";
     }
 
     $(".tinder_card").eq(0).css({
@@ -175,7 +187,7 @@ function btn_click(class_type) {
 
     $(".tinder_card").eq(0).animate({
         left: pos
-    }, 400, function() {
+    }, 800, function() {
 
         feedback($(".tinder_card"));
         //$(".tinder_card").eq(0).remove();
