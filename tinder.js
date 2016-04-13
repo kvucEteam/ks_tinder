@@ -1,16 +1,18 @@
-var colors = ["#ffff99", " #acefed", "#d2d4ec", "#f2b9e1", "#d2d4ec", "#f6c0c0", "#acefed", "#e5c180", "#3ee180"];
 var runde = 0;
 var user_select;
 var rotateCSS;
 var hovering = false;
+var opg_type;
+
 
 $(document).ready(function() {
+    if (jsonData[0].Konklusion) {
+        opg_type = "konklusion";
+    } else {
+        opg_type = "problemformulering"
+    }
 
     enable_audio();
-
-    //console.log(JSON.stringify(jsonData));
-    //  console.log(jsonData[0].Korrekt);
-
     generateHTML();
     makeDraggable();
 
@@ -32,10 +34,6 @@ $(document).ready(function() {
                     feedback(ui);
                 });
 
-                /*ui.draggable.fadeOut(300, function() {
-                    generateHTML();
-                    makeDraggable();
-                });*/
             } else if (class_type == "dropzone_yes") {
                 user_select = true;
                 //UserMsgBox("body", "<h3>Du har svaret <span class='label label-danger'>Forkert</span> </h3><h3> Feedback:</h3><p>Lorem ipsum....</p>");
@@ -46,22 +44,17 @@ $(document).ready(function() {
                 }, 200, function() {
                     feedback(ui);
                 });
-
             }
-
         },
         hoverClass: function(event, ui, is_valid_drop) {
-
-            console.log("Event" + event + ", UI:" + ui + "," + is_valid_drop);
-
             var dropclass = $(this).attr("class").split(' ')[1];
 
             if (dropclass == "dropzone_no") {
                 $(".txt_vurdering").eq(0).css("opacity", 1);
-                $(".txt_vurdering").eq(0).html("<span class='label label-danger'>Dårlig problemformulering</span>");
+                $(".txt_vurdering").eq(0).html("<span class='label label-danger'>Dårlig " + opg_type + "</span>");
             } else if (dropclass == "dropzone_yes") {
                 $(".txt_vurdering").eq(0).css("opacity", 1);
-                $(".txt_vurdering").eq(0).html("<span class='label label-success'>God problemformulering</span>");
+                $(".txt_vurdering").eq(0).html("<span class='label label-success'>God " + opg_type + "</span>");
             }
         }
     });
@@ -72,8 +65,16 @@ function generateHTML() {
     //alert(jsonData.length);
 
     for (var i = 0; i < jsonData.length; i++) {
+
         $(".tinder_container").append("<div class='text_container tinder_card card_" + i + " textHolder'></div>");
-        $(".tinder_card").eq(i).html("<p class='card_header'>Nøgleproblem: " + jsonData[i].Nogleproblem + "</p><p class='card_text'>''" + jsonData[i].Draggabletext + "''</p><div class='txt_vurdering'></div>");
+        if (opg_type == "problemformulering") {
+            $(".tinder_card").eq(i).html("<p class='card_header'>Nøgleproblem: " + jsonData[i].Nogleproblem + "</p><p class='card_text'>Problemformulering: ''" + jsonData[i].Problemformulering + "''</p><div class='txt_vurdering'></div>");
+        } else {
+            $(".tinder_card").eq(i).html("<p class='card_header'>Nøgleproblem: " + jsonData[i].Nogleproblem + "<br/>Problemformulering: " + jsonData[i].Problemformulering + "</p><p class='card_text'>Konklusion: ''" + jsonData[i].Konklusion + "''</p><div class='txt_vurdering'></div>");
+
+        }
+
+
         $(".tinder_card").eq(i).css("z-index", 20 - i);
         $(".tinder_card").eq(i).css("margin-top", i * 7);
         if (i > 4) {
@@ -140,11 +141,18 @@ function feedback(ui) {
         error_sound();
     }
     console.log("Runde: " + runde + ", Korrekt: " + jsonData[runde].Korrekt + ", " + user_select);
-    if (jsonData[runde].Korrekt === true) {
-        UserMsgBox("body", "<h3>Du svarede " + svar_type + "</h3><p>'" + jsonData[runde].Draggabletext + "' <br/><br/>Problemformuleringen er  <span style='font-size:14px; font-weight:100' class='label label-success'>God</span></p><h4>Hvorfor den er god:</h4><p>" + jsonData[runde].Feedback + "</p>");
-    } else if (jsonData[runde].Korrekt === false) {
-        UserMsgBox("body", "<h3>Du svarede " + svar_type + "</h3><p>'" + jsonData[runde].Draggabletext + "' <br/><br/>Problemformuleringen er  <span style='font-size:14px; font-weight:100' class='label label-danger'>Dårlig</span></p><h4>Hvorfor den er dårlig:</h4><p>" + jsonData[runde].Feedback + "</p>");
-
+    if (opg_type == "problemformulering") {
+        if (jsonData[runde].Korrekt === true) {
+            UserMsgBox("body", "<h3>Du svarede " + svar_type + "</h3><p>'" + jsonData[runde].Problemformulering + "' <br/><br/>Denne " + opg_type + " er  <span style='font-size:14px; font-weight:100' class='label label-success'>God</span></p><h4>Hvorfor den er god:</h4><p>" + jsonData[runde].Feedback + "</p>");
+        } else if (jsonData[runde].Korrekt === false) {
+            UserMsgBox("body", "<h3>Du svarede " + svar_type + "</h3><p>'" + jsonData[runde].Problemformulering + "' <br/><br/>Denne " + opg_type + " er  <span style='font-size:14px; font-weight:100' class='label label-danger'>Dårlig</span></p><h4>Hvorfor den er dårlig:</h4><p>" + jsonData[runde].Feedback + "</p>");
+        }
+    }else if (opg_type =="konklusion"){
+         if (jsonData[runde].Korrekt === true) {
+            UserMsgBox("body", "<h3>Du svarede " + svar_type + "</h3><p>'" + jsonData[runde].Konklusion + "' <br/><br/>Denne " + opg_type + " er  <span style='font-size:14px; font-weight:100' class='label label-success'>God</span></p><h4>Hvorfor den er god:</h4><p>" + jsonData[runde].Feedback + "</p>");
+        } else if (jsonData[runde].Korrekt === false) {
+            UserMsgBox("body", "<h3>Du svarede " + svar_type + "</h3><p>'" + jsonData[runde].Konklusion + "' <br/><br/>Denne " + opg_type + " er  <span style='font-size:14px; font-weight:100' class='label label-danger'>Dårlig</span></p><h4>Hvorfor den er dårlig:</h4><p>" + jsonData[runde].Feedback + "</p>");
+        }
     }
 
 
