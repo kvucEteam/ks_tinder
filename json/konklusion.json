@@ -1,10 +1,10 @@
 [
     {
-        "Nogleproblem": "Globalisering",
-        "Konklusion": "Jeg konkluderer, at nationalismen genopstår fordi Europa er blevet større. Nu er der em masse lande med og så er det klart, at der kommer nationalisme ind i billedet.",
-        "Problemformulering": "Hvorfor ser vi en genopblomstring af nationalismen i Europa i dag i en ellers globaliseret verden?",
-        "Korrekt": false,
-        "Feedback": "Lorem ipsum dolor sit amet, natoque iaculis, mauris velit venenatis blandit, itaque aliquam enim commodo non maecenas. Felis magna natoque tincidunt, hendrerit nunc etiam. In pede, etiam libero dolor ante nullam nec. Vitae inceptos scelerisque nunc imperdiet est nec, urna magna dui eget volutpat et vehicula, dolor congue phasellus. Imperdiet porttitor vestibulum neque, mattis amet ut faucibus, sed fringilla, enim tortor eiusmod dui, vestibulum amet."
+        "Nogleproblem": "Flygtninge, fjendebilleder, kulturmøde og integration",
+    "Problemformulering": "Er fjendebilleder et produkt af samfundstendenser eller betragter Islam og vesten entydigt hinanden som fjender?",
+    "Konklusion": "Der synes ikke at være belæg for at vesten og islam ikke kan leve i fredelig sameksistens. Men grundet interne konflikter, ideologisk og teologisk uenighed kan fjendebilleder mellem islam og vesten nemt opstå. Således har nogle fraktioner af islam og  nogle politikere i vesten haft fordel af at  konstruer fjendebilleder af hinanden for at opnå støtte til et bestemt politisk mål eller sag.",
+        "Korrekt": true,
+        "Feedback": "Konklusionen er god fordi den besvarer begge de spørgsmål der rejses i problemformulering klart og præcist. Den besvare således både om der eksisterer et entydigt fjendebillede samt betydningen af centrale samfundstendenser."
     }, {
         "Nogleproblem": "Flygtninge, fjendebilleder, kulturmøde og integration",
         "Konklusion": "Det ser ud til at det er sværere at integrere muslimer i et sekulært samfund end i et andet muslimsk land. Og bla bla bla....",

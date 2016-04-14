@@ -33,7 +33,7 @@ h1{
     margin-right: 0%;
     margin-top: 30px;
     float: left;
-    height: 600px;
+    height: 910px;
     /* border-bottom: 2px double #ddd; */
     border-radius: 6px;
     /* background-color: white; */
@@ -47,7 +47,7 @@ h1{
 
 .knap_container {
     float: left;
-    margin-top: 410px;
+    margin-top: 590px;
     text-align: center;
     width: 100%;
     background-color: transparent;
@@ -101,6 +101,13 @@ h1{
     user-select: none;
 }
 
+.card_header {
+    background-color: rgba(123,231,231,.5);
+    width:70%;
+    border-radius: 4px;
+    padding:10px;
+}
+
 @media (max-width: 768px) {
     .card_header {
         font-size: 12px;
@@ -117,6 +124,5 @@ h1{
     .card_text {
         font-size: 24px;
         padding-right: 40px;
-        font-weight: 200;
     }
 }
