@@ -63,13 +63,28 @@ h1{
 }
 
 .btn_no {
-    /*font-size: 2.1em;*/
+    font-size: 2.1em;
 
     color: red;
+}
+#UserMsgBox > .glyphicon-remove{
+    color:#666;
+}
+.glyphicon-remove{
+    color:red;
+}
+
+
+.glyphicon-remove:hover{
+    color:red;
 }
 
 .btn_yes {
     color: green;
+}
+
+.btn_yes:hover{
+    color:green;
 }
 
 .dropzone_no {
@@ -110,19 +125,31 @@ h1{
 
 @media (max-width: 768px) {
     .card_header {
-        font-size: 12px;
+        font-size: 16px;
+
     }
     .card_text {
-        font-size: 16px;
+        font-size: 24px;
+    }
+
+    .card_text_konkl{
+        font-size: 20px;
     }
 }
 
 @media (min-width: 768px) {
     .card_header {
-        font-size: 18px;
+        font-size: 20px;
+        margin-bottom: 40px;
     }
     .card_text {
-        font-size: 20px;
+        font-size: 28px;
         padding-right: 40px;
+    }
+    .card_header_konkl{
+        margin-bottom: 30px;
+    }
+     .card_text_konkl{
+        font-size:24px;
     }
 }
