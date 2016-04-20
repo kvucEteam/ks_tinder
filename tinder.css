@@ -63,8 +63,6 @@ h1{
 }
 
 .btn_no {
-    font-size: 2.1em;
-
     color: red;
 }
 #UserMsgBox > .glyphicon-remove{
@@ -118,7 +116,6 @@ h1{
 
 .card_header {
     background-color: rgba(123,231,231,.5);
-    width:70%;
     border-radius: 4px;
     padding:10px;
 }

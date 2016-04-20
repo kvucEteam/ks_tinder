@@ -3,9 +3,13 @@ var user_select;
 var rotateCSS;
 var hovering = false;
 var opg_type;
-
+var json_Array = [];
 
 $(document).ready(function() {
+
+shuffle_Array(jsonData);
+
+
     if (jsonData[0].Konklusion) {
         opg_type = "konklusion";
     } else {
@@ -66,6 +70,7 @@ function generateHTML() {
 
     for (var i = 0; i < jsonData.length; i++) {
 
+
         $(".tinder_container").append("<div class='text_container tinder_card card_" + i + " textHolder'></div>");
         if (opg_type == "problemformulering") {
             $(".tinder_card").eq(i).html("<p class='card_header'><b>Nøgleproblem:</b> " + jsonData[i].Nogleproblem + "</p><p class='card_text'><b>Problemformulering:</b> ''" + jsonData[i].Problemformulering + "''</p><div class='txt_vurdering'></div>");
@@ -85,7 +90,8 @@ function generateHTML() {
     $(".txt_vurdering").css("opacity", 0);
 
     $(".tinder_container").append('<div class="knap_container hidden-xs hidden-sm col-md-12"><div class="btn_tinder btn-lg btn btn-info btn_no"><span class="glyphicon glyphicon-remove"></span></div><div class="btn_tinder btn btn-info btn-lg btn_yes"><span class="glyphicon glyphicon-heart"></span></div></div>');
-
+    
+    //$(".tinder_container .tinder_card").shuffle_div_position();
 };
 
 function makeDraggable() {
