@@ -76,10 +76,7 @@ function generateHTML() {
             $(".tinder_card").eq(i).html("<p class='card_header'><b>Nøgleproblem:</b> " + jsonData[i].Nogleproblem + "</p><p class='card_text'><b>Problemformulering:</b> ''" + jsonData[i].Problemformulering + "''</p><div class='txt_vurdering'></div>");
         } else {
             $(".tinder_card").eq(i).html("<p class='card_header card_header_konkl'><b>Nøgleproblem:</b> " + jsonData[i].Nogleproblem + "</p><p class='card_text_konkl'><b>Problemformulering:</b> ''" + jsonData[i].Problemformulering + "''</p><p class='card_text_konkl'><b>Konklusion: </b>''" + jsonData[i].Konklusion + "''</p><div class='txt_vurdering'></div>");
-
         }
-
-
         $(".tinder_card").eq(i).css("z-index", 20 - i);
         $(".tinder_card").eq(i).css("margin-top", i * 7);
         if (i > 4) {
@@ -112,7 +109,7 @@ function makeDraggable() {
         },
         axis: "x",
         containment: "body",
-        revertDuration: 50,
+        revertDuration: 500,
         start: function(event, ui) {
             updateStack();
         },
