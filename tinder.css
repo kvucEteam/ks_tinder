@@ -12,7 +12,7 @@
     border-bottom: 7px solid white;
 }
 
-h1{
+h1, .toph3 {
     text-align: center;
 }
 
@@ -31,9 +31,8 @@ h1{
     width: 70%;
     margin-left: 0%;
     margin-right: 0%;
-    margin-top: 30px;
     float: left;
-    height: 910px;
+    height: 500px;
     /* border-bottom: 2px double #ddd; */
     border-radius: 6px;
     /* background-color: white; */
@@ -47,7 +46,7 @@ h1{
 
 .knap_container {
     float: left;
-    margin-top: 590px;
+
     text-align: center;
     width: 100%;
     background-color: transparent;
@@ -65,24 +64,25 @@ h1{
 .btn_no {
     color: red;
 }
-#UserMsgBox > .glyphicon-remove{
-    color:#666;
-}
-.glyphicon-remove{
-    color:red;
+
+#UserMsgBox > .glyphicon-remove {
+    color: #666;
 }
 
+.glyphicon-remove {
+    color: red;
+}
 
-.glyphicon-remove:hover{
-    color:red;
+.glyphicon-remove:hover {
+    color: red;
 }
 
 .btn_yes {
     color: green;
 }
 
-.btn_yes:hover{
-    color:green;
+.btn_yes:hover {
+    color: green;
 }
 
 .dropzone_no {
@@ -115,40 +115,66 @@ h1{
 }
 
 .card_header {
-    background-color: rgba(123,231,231,.5);
+    background-color: rgba(123, 231, 231, .5);
     border-radius: 4px;
-    padding:10px;
+    padding: 10px;
 }
 
 @media (max-width: 768px) {
-    .card_header {
-        font-size: 16px;
 
+    .tinder_container{
+        height:500px;
+    }
+    .tinder_card {
+        height: 65%;
+    }
+    .btn_tinder {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 9px;
+    padding-bottom: 0px;
+    font-size: 1.8em;
+}
+    .knap_container {
+        top: 70%;
+    }
+    .card_header {
+        font-size: 12px;
     }
     .card_text {
-        font-size: 24px;
+        font-size: 16px;
     }
-
-    .card_text_konkl{
-        font-size: 20px;
+    .card_text_konkl {
+        font-size: 14px;
     }
 }
 
 @media (min-width: 768px) {
+.tinder_container{
+        height:800px;
+    }
+     .tinder_card {
+        height: 75%;
+    }
+     .knap_container {
+        top: 82%;
+    }
     .card_header {
         font-size: 20px;
         margin-bottom: 40px;
     }
     .card_text {
-        font-size: 28px;
+        font-size: 24px;
         padding-right: 40px;
     }
-    .card_header_konkl{
+    .card_header_konkl {
         margin-bottom: 30px;
     }
-     .card_text_konkl{
-        font-size:24px;
+    .card_text_konkl {
+        font-size: 24px;
     }
 }
 
-
+#UserMsgBox .label {
+    margin-left: 0px;
+}
