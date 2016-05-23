@@ -12,7 +12,8 @@
     border-bottom: 7px solid white;
 }
 
-h1, .toph3 {
+h1,
+.toph3 {
     text-align: center;
 }
 
@@ -46,7 +47,6 @@ h1, .toph3 {
 
 .knap_container {
     float: left;
-
     text-align: center;
     width: 100%;
     background-color: transparent;
@@ -120,21 +120,22 @@ h1, .toph3 {
     padding: 10px;
 }
 
-@media (max-width: 768px) {
+.card_text_konkl {}
 
-    .tinder_container{
-        height:500px;
+@media (max-width: 768px) {
+    .tinder_container {
+        height: 500px;
     }
     .tinder_card {
         height: 65%;
     }
     .btn_tinder {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 9px;
-    padding-bottom: 0px;
-    font-size: 1.8em;
-}
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 9px;
+        padding-bottom: 0px;
+        font-size: 1.8em;
+    }
     .knap_container {
         top: 70%;
     }
@@ -150,13 +151,13 @@ h1, .toph3 {
 }
 
 @media (min-width: 768px) {
-.tinder_container{
-        height:800px;
+    .tinder_container {
+        height: 800px;
     }
-     .tinder_card {
+    .tinder_card {
         height: 75%;
     }
-     .knap_container {
+    .knap_container {
         top: 82%;
     }
     .card_header {
@@ -178,3 +179,20 @@ h1, .toph3 {
 #UserMsgBox .label {
     margin-left: 0px;
 }
+
+.slutFeedback {
+    width: 50%;
+    margin-left: 25%;
+}
+
+.label_container{
+    margin-top:10px;
+    margin-bottom:10px;
+
+}
+
+.btn_again{
+    margin-top: 30px;
+}
+
+

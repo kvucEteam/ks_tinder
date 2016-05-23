@@ -5,17 +5,18 @@ var hovering = false;
 var opg_type;
 var json_Array = [];
 
+var score = 0;
+
 $(document).ready(function() {
-
-    //shuffle_Array(jsonData);
-
 
     if (jsonData[0].Konklusion) {
         opg_type = "konklusion";
     } else {
         opg_type = "problemformulering"
+        shuffle_Array(jsonData);
     }
 
+    console.log(typeof(runde));
     enable_audio();
     generateHTML();
     makeDraggable();
@@ -89,7 +90,8 @@ function generateHTML() {
     $(".txt_vurdering").css("opacity", 0);
 
     $(".tinder_container").append('<div class="knap_container col-md-12"><div class="btn_tinder btn-lg btn btn-info btn_no"><span class="glyphicon glyphicon-remove"></span></div><div class="btn_tinder btn btn-info btn-lg btn_yes"><span class="glyphicon glyphicon-heart"></span></div></div>');
-
+    //$(".boxit").boxfit({ multiline: true });
+    //$(".card_text_konkl").boxfit({ multiline: true });
     //$(".tinder_container .tinder_card").shuffle_div_position();
 };
 
@@ -132,6 +134,9 @@ function makeDraggable() {
         stop: function(event, ui) {
             if (jsonData[runde].Korrekt == user_select) {
                 correct_sound();
+                score++;
+                console.log("Score: " + score + "LEnght: " + jsonData.length);
+
             } else {
                 error_sound();
             }
@@ -181,6 +186,10 @@ function updateStack() {
             $(".tinder_card").eq(index).fadeIn();
         }
     });
+
+    if (runde >= jsonData.length) {
+        slutFeedback();
+    }
     makeDraggable();
 }
 
@@ -209,8 +218,8 @@ function btn_click(class_type) {
     });
 
     $(".tinder_card").eq(0).animate({
-        left: pos, 
-        opacity:"0"
+        left: pos,
+        opacity: "0"
     }, 400, function() {
 
 
@@ -218,5 +227,28 @@ function btn_click(class_type) {
         feedback($(".tinder_card"));
         //$(".tinder_card").eq(0).remove();
         //updateStack();
+    });
+}
+
+function slutFeedback() {
+    var pct = Math.floor(score / jsonData.length * 100);
+    var ord = "";
+    var label = "";
+    if (pct < 33) {
+        ord = "Fejl";
+        label = "label-danger";
+        
+    } else if (pct < 67) {
+        ord = "Advarsel";
+        label = "label-warning";
+    } else {
+        ord = "Succes";
+        label = "label-success";
+    }
+
+    $(".tinder_container").html("<div class ='slutFeedback'><h3>" + ord + ", der er <div class='label_container'><span class='label label-lg'" + label + "'>"+pct+"%</span></div>match mellem dig og " + opg_type +"en</h3><div class='btn btn-primary btn_again'>PRØV IGEN</div></div>")
+
+    $(".btn_again").click(function(){
+        location.reload();
     });
 }
