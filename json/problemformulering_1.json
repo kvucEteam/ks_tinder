@@ -29,12 +29,6 @@
     "Korrekt": false,
     "Feedback": "Problemformuleringen er ikke god. Der fokuseres for meget på kun et element med betydning for ungdommen. Der gør problemformuleringen for begrænset. Det bliver svært at inddrage  alle tre fag i tilstrækkeligt omfang. Det kunne også være en fordel, hvis den i højrer grad lagde op til at sammenligne eller se forskelle ift. det traditionelle- moderne- eller senmoderne samfund."
 }, {
-    "Nogleproblem": "Flygtninge, fjendebilleder, kulturmøde og integration",
-
-    "Problemformulering": "Hvordan integrerer vi folk med anden baggrund bedst muligt?",
-    "Korrekt": false,
-    "Feedback": "Lorem ipsum dolor sit amet, natoque iaculis, mauris velit venenatis blandit, itaque aliquam enim commodo non maecenas. Felis magna natoque tincidunt, hendrerit nunc etiam. In pede, etiam libero dolor ante nullam nec. Vitae inceptos scelerisque nunc imperdiet est nec, urna magna dui eget volutpat et vehicula, dolor congue phasellus. Imperdiet porttitor vestibulum neque, mattis amet ut faucibus, sed fringilla, enim tortor eiusmod dui, vestibulum amet."
-}, {
     "Nogleproblem": "Samfundsskabt ulighed",
 
     "Problemformulering": "Kan den danske velfærdsstat bestå i sin nuværende form?",
@@ -56,15 +50,9 @@
     "Nogleproblem": "Samfundsskabt ulighed",
 
     "Problemformulering": "Hvorfor er velfærdsmodellerne i Danmark og USA så forskellige, og hvordan kan disse to systemer udvikle sig i fremtiden?",
-    "Korrekt": false,
-    "Feedback": "Problemformuleringen er ikke god. Den er for værdiladet idet den antager at ulighed automatisk skaber et uharmonisk samfund. Det er vigtigt at problemformuleringen ikke på forhånd lægger op til en bestemt konklusion."
-}, {
-    "Nogleproblem": "Samfundsskabt ulighed",
-
-    "Problemformulering": "Hvorfor vil nogle skabe ulighed og dermed skabe et uharmonisk samfund?",
-    "Korrekt": false,
+    "Korrekt": true,
     "Feedback": "Problemformuleringen er god. Den bringer de tre fag i spil da velfærdsstaternes forskellighed jo kan forklares historisk, samfundsfagligt og religiøst. Desuden ligger problemformuleringen op til en diskussion ift. udviklingen af velfærdsstaterne i fremtiden og dermed lukker den op for det højeste taksonomiske niveau."
-}, {
+},{
     "Nogleproblem": "Tyskland",
 
     "Problemformulering": "Hvorfor var det nødvendigt for regimerne i det 20. århundredes Tyskland at anvende, fjendebilleder til erobring og fastholdelse af magten?",
@@ -85,7 +73,7 @@
 },{
     "Nogleproblem": "Det gode samfund",
 
-    "Problemformulering": "Den danske velfærdsstat.(Velfærdsstatens historie religiøst. Danmark nu udfordring/politisk)",
+    "Problemformulering": "Den danske velfærdsstat. Velfærdsstatens historie religiøst. Danmark nu udfordring/politisk",
     "Korrekt": false,
     "Feedback": "Denne problemformulering er dårlig, da den ikke indeholder et konkret undersøgende spørgsmål, som forholder sig til det overordnede emne."
 },{
@@ -100,10 +88,4 @@
     "Problemformulering": "Hvad er et kulturmøde?",
     "Korrekt": false,
     "Feedback": "Denne problemformulering er dårlig, da den er ikke er specifik nok, og ikke indeholder en reel problemstilling. Den er kun på redegørende niveau."
-},{
-    "Nogleproblem": "Tyskland",
-
-    "Problemformulering": "Hvilke historiske og religionsfilosofiske rødder og samfundsteoretiske teorier kan forklare den samfundsindretning og det syn på individet vi har i Danmark og hvilke udfordringer står denne samfundsindretning over for.",
-    "Korrekt": true,
-    "Feedback": "Dette er en god problemformulering, da den på en og samme tid inddrager de tre fag, samt forholder sig det overordnede emne. Samtidig ligges der op til en diskussion af de divergerende syn på begrebet det gode samfund."
 }]

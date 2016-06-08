@@ -4,16 +4,20 @@ var rotateCSS;
 var hovering = false;
 var opg_type;
 var json_Array = [];
+var revert = false;
 
 var score = 0;
 
 $(document).ready(function() {
 
     if (jsonData[0].Konklusion) {
+        $(".instr_container").html(instruction("Du skal vurdere konklusionen og swipe til højre hvis den er god og til venstre hvis den er dårlig"));
         opg_type = "konklusion";
     } else {
+        $(".instr_container").html(instruction("Du skal vurdere problemformuleringen og swipe til højre hvis den er god og til venstre hvis den er dårlig"));
         opg_type = "problemformulering"
         shuffle_Array(jsonData);
+        $(".tinder_container").css("height", "750px");
     }
 
     console.log(typeof(runde));
@@ -91,7 +95,7 @@ function generateHTML() {
 
     $(".tinder_container").append('<div class="knap_container col-md-12"><div class="btn_tinder btn-lg btn btn-info btn_no"><span class="glyphicon glyphicon-remove"></span></div><div class="btn_tinder btn btn-info btn-lg btn_yes"><span class="glyphicon glyphicon-heart"></span></div></div>');
     //$(".boxit").boxfit({ multiline: true });
-    //$(".card_text_konkl").boxfit({ multiline: true });
+    //$(".card_text").boxfit({ multiline: true });
     //$(".tinder_container .tinder_card").shuffle_div_position();
 };
 
@@ -101,6 +105,8 @@ function makeDraggable() {
             if (is_valid_drop) {
 
             } else {
+
+                revert = true;
                 $(this).css({
                     '-moz-transform': 'rotate(0deg)',
                     '-webkit-transform': 'rotate(0deg)',
@@ -132,20 +138,22 @@ function makeDraggable() {
             });
         },
         stop: function(event, ui) {
-            if (jsonData[runde].Korrekt == user_select) {
+            if (jsonData[runde].Korrekt === user_select && revert == false) {
                 correct_sound();
                 score++;
                 console.log("Score: " + score + "LEnght: " + jsonData.length);
 
-            } else {
+            } else if (jsonData[runde].Korrekt != user_select && revert == false) {
                 error_sound();
             }
-
+            revert = false;
         },
     });
 }
 
 function feedback(ui) {
+
+
 
     if (jsonData[runde].Korrekt == user_select) {
         var svar_type = "<span class='label label-success'>Rigtigt</span>"; //$(".svar").html("Du svarede rigtigt.");
@@ -235,20 +243,20 @@ function slutFeedback() {
     var ord = "";
     var label = "";
     if (pct < 33) {
-        ord = "Fejl";
+        ord = "Ikke et godt match :-(";
         label = "label-danger";
-        
+
     } else if (pct < 67) {
-        ord = "Advarsel";
+        ord = "Et halvårligt match :-/";
         label = "label-warning";
     } else {
-        ord = "Succes";
+        ord = "Et godt match :-)";
         label = "label-success";
     }
 
-    $(".tinder_container").html("<div class ='slutFeedback'><h3>" + ord + ", der er <div class='label_container'><span class='label label-lg'" + label + "'>"+pct+"%</span></div>match mellem dig og " + opg_type +"en</h3><div class='btn btn-primary btn_again'>PRØV IGEN</div></div>")
+    $(".tinder_container").html("<div class ='slutFeedback'><h2>" + ord + "<h2><h3>Du har <div class='label_container'><span class='label label-lg " + label + "'>" + pct + "%</span></div>rigtige svar i opgaven om " + opg_type + "er</h3><div class='btn btn-primary btn_again'>PRØV IGEN</div></div>");
 
-    $(".btn_again").click(function(){
+    $(".btn_again").click(function() {
         location.reload();
     });
 }
