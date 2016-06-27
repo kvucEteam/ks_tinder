@@ -17,7 +17,7 @@ $(document).ready(function() {
         $(".instr_container").html(instruction("Du skal vurdere problemformuleringen og trække til højre hvis den er god og til venstre hvis den er dårlig"));
         opg_type = "problemformulering"
         shuffle_Array(jsonData);
-        $(".tinder_container").css("height", "750px");
+        //$(".tinder_container").css("height", "750px");
     }
 
     console.log(typeof(runde));
@@ -62,10 +62,10 @@ $(document).ready(function() {
 
             if (dropclass == "dropzone_no") {
                 $(".txt_vurdering").eq(0).css("opacity", 1);
-                $(".txt_vurdering").eq(0).html("<span class='label label-danger'>Dårlig " + opg_type + "</span>");
+                $(".txt_vurdering").eq(0).html("<span class='label label_feed label-danger'>Dårlig " + opg_type + "</span>");
             } else if (dropclass == "dropzone_yes") {
                 $(".txt_vurdering").eq(0).css("opacity", 1);
-                $(".txt_vurdering").eq(0).html("<span class='label label-success'>God " + opg_type + "</span>");
+                $(".txt_vurdering").eq(0).html("<span class='label label_feed label-success'>God " + opg_type + "</span>");
             }
         }
     });
@@ -118,7 +118,7 @@ function makeDraggable() {
             }
         },
         axis: "x",
-        containment: "body",
+        containment: ".container-fluid",
         revertDuration: 500,
         start: function(event, ui) {
             updateStack();
@@ -165,7 +165,7 @@ function feedback(ui) {
     console.log("Runde: " + runde + ", Korrekt: " + jsonData[runde].Korrekt + ", " + user_select);
     if (opg_type == "problemformulering") {
         if (jsonData[runde].Korrekt === true) {
-            UserMsgBox("body", "<h3>Du svarede " + svar_type + "</h3><p class='hidden-xs hidden-sm'>'" + jsonData[runde].Problemformulering + "' <br/><br/>Denne " + opg_type + " er  <span style='font-size:14px; font-weight:100' class='label label-success'>God</span></p><h4>Hvorfor den er god:</h4><p>" + jsonData[runde].Feedback + "</p>");
+            UserMsgBox("body", "<h3>Du svarede " + svar_type + "</h3><p class='hidden-xs hidden-sm'>'" + jsonData[runde].Problemformulering + "' <br/><br/>Denne " + opg_type + " er  <span style='font-size:14px; font-weight:100' class='label  label-success'>God</span></p><h4>Hvorfor den er god:</h4><p>" + jsonData[runde].Feedback + "</p>");
         } else if (jsonData[runde].Korrekt === false) {
             UserMsgBox("body", "<h3>Du svarede " + svar_type + "</h3><p class='hidden-xs hidden-sm'>'" + jsonData[runde].Problemformulering + "' <br/><br/>Denne " + opg_type + " er  <span style='font-size:14px; font-weight:100' class='label label-danger'>Dårlig</span></p><h4>Hvorfor den er dårlig:</h4><p>" + jsonData[runde].Feedback + "</p>");
         }
@@ -247,7 +247,7 @@ function slutFeedback() {
         label = "label-danger";
 
     } else if (pct < 67) {
-        ord = "Et halvårligt match :-/";
+        ord = "Et halvdårligt match :-/";
         label = "label-warning";
     } else {
         ord = "Et godt match :-)";
