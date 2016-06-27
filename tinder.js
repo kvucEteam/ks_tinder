@@ -23,8 +23,7 @@ $(document).ready(function() {
     console.log(typeof(runde));
     enable_audio();
     generateHTML();
-    makeDraggable();
-
+    updateStack();
     $(".btn_no, .btn_yes").click(function() {
         console.log(this);
         var class_type = $(this).attr("class").split(' ')[4];
@@ -198,7 +197,25 @@ function updateStack() {
     if (runde >= jsonData.length) {
         slutFeedback();
     }
-    makeDraggable();
+
+          var scrollheight = $(".tinder_card").eq(0)[0].scrollHeight;
+          var innerheight = $(".tinder_card").eq(0).innerHeight();
+
+            if (scrollheight > innerheight){  
+
+                jQuery(function($) {
+                $('.tinder_card').eq(0).on('scroll', function() {
+                    console.log("Runde: " + runde + " SH: " + scrollheight + "IH : " + innerheight + " scrolltop:  " + $(".tinder_card").scrollTop());
+                    if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
+                      makeDraggable();
+                      //alert('end reached');
+                    }
+                })
+            });
+        }else{
+        makeDraggable();
+        }
+    
 }
 
 function btn_click(class_type) {
@@ -260,3 +277,5 @@ function slutFeedback() {
         location.reload();
     });
 }
+
+
