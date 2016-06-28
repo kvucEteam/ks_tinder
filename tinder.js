@@ -164,9 +164,9 @@ function feedback(ui) {
     console.log("Runde: " + runde + ", Korrekt: " + jsonData[runde].Korrekt + ", " + user_select);
     if (opg_type == "problemformulering") {
         if (jsonData[runde].Korrekt === true) {
-            UserMsgBox("body", "<h3>Du svarede " + svar_type + "</h3><p class='hidden-xs hidden-sm'>'" + jsonData[runde].Problemformulering + "' <br/><br/>Denne " + opg_type + " er  <span style='font-size:14px; font-weight:100' class='label  label-success'>God</span></p><h4>Hvorfor den er god:</h4><p>" + jsonData[runde].Feedback + "</p>");
+            UserMsgBox("body", "<h3>Du svarede " + svar_type + "</h3><p class='hidden-xs hidden-sm'>'" + jsonData[runde].Problemformulering + "' <br/><br/>Denne " + opg_type + " er  <span style='font-size:14px; font-weight:100' class='label  label-success'>God</span></p><h4>Hvorfor er " + opg_type + "en god?:</h4><p>" + jsonData[runde].Feedback + "</p>");
         } else if (jsonData[runde].Korrekt === false) {
-            UserMsgBox("body", "<h3>Du svarede " + svar_type + "</h3><p class='hidden-xs hidden-sm'>'" + jsonData[runde].Problemformulering + "' <br/><br/>Denne " + opg_type + " er  <span style='font-size:14px; font-weight:100' class='label label-danger'>Dårlig</span></p><h4>Hvorfor den er dårlig:</h4><p>" + jsonData[runde].Feedback + "</p>");
+            UserMsgBox("body", "<h3>Du svarede " + svar_type + "</h3><p class='hidden-xs hidden-sm'>'" + jsonData[runde].Problemformulering + "' <br/><br/>Denne " + opg_type + " er  <span style='font-size:14px; font-weight:100' class='label label-danger'>Dårlig</span></p><h4>Hvorfor er " + opg_type + "en dårlig?:</h4><p>" + jsonData[runde].Feedback + "</p>");
         }
     } else if (opg_type == "konklusion") {
         if (jsonData[runde].Korrekt === true) {
