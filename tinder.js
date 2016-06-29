@@ -11,10 +11,10 @@ var score = 0;
 $(document).ready(function() {
 
     if (jsonData[0].Konklusion) {
-        $(".instr_container").html(instruction("Du skal vurdere konklusionen og trække til højre hvis den er god og til venstre hvis den er dårlig"));
+        $(".instr_container").html(instruction("Du skal vurdere konklusionen og trække kortet til højre, hvis den er god og til venstre, hvis den er dårlig."));
         opg_type = "konklusion";
     } else {
-        $(".instr_container").html(instruction("Du skal vurdere problemformuleringen og trække til højre hvis den er god og til venstre hvis den er dårlig"));
+        $(".instr_container").html(instruction("Du skal vurdere problemformuleringen og trække kortet til højre, hvis den er god og til venstre, hvis den er dårlig."));
         opg_type = "problemformulering"
         shuffle_Array(jsonData);
         //$(".tinder_container").css("height", "750px");
