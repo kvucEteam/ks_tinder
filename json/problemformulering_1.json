@@ -7,12 +7,12 @@
     "Nogleproblem": "Flygtninge, fjendebilleder, kulturmøde og integration",
     "Problemformulering": "Hvorfor er der krig mellem Islam og Vesten?",
     "Korrekt": false,
-    "Feedback": "Den er upræcis, da der jo ikke er tale om en krig mellem alle muslimer og alle i vesten. Det er et postulat, der ikke er belæg for."
+    "Feedback": "Problemformuleringen er for bred og upræcis. Hvad er Vesten? Og er der krig mellem alle muslimer og hele Vesten? Problemformuleringen indeholder et postulat, som der ikke er dækning for."
 }, {
     "Nogleproblem": "Flygtninge, fjendebilleder, kulturmøde og integration",
     "Problemformulering": "Hvordan har Islam udviklet sig i verdenssamfundet?",
     "Korrekt": false,
-    "Feedback": " Den er meget bred, upræcis og svær at besvare fyldestgørende. <br/>Hvad er f.eks. verdenssamfundet? Desuden lægger spørgsmålet op til at beskrive eller i bedste fald undersøge en udvikling, men det er svært at nå et diskuterende/vurderende niveau med den problemformulering."
+    "Feedback": "Problemformuleringen er for bred og upræcis, og den bliver derfor svær at besvare. Hvad er fx verdenssamfundet? Desuden lægger “hvordan-spørgsmålet” op til at beskrive eller undersøge en udvikling. Det lægger ikke op til at diskutere eller vurdere noget."
 }, {
     "Nogleproblem": "Identitetsdannelse",
     "Problemformulering": "Er det lettere at være ung i det senmoderne samfund end det var i det traditionelle samfund?",
@@ -22,14 +22,14 @@
     "Nogleproblem": "Identitetsdannelse",
     "Problemformulering": "Hvordan var det at være ung i det traditionelle samfund?",
     "Korrekt": false,
-    "Feedback": " Spørgsmålet lægger op til at beskrive eller i bedste fald undersøge en udvikling, men det bliver svært at nå et diskuterende/vurderende niveau. <br/>Det er vigtigt at alle tre fag bringes i spil. Udelukkende at fokusere på det traditionelle samfund gør det svært f.eks. at inddrage samfundsfag."
+    "Feedback": "“Hvordan-spørgsmålet” lægger op til at beskrive eller undersøge en udvikling. Det lægger ikke op til at diskutere eller vurdere noget. Desuden er det problematisk, at spørgsmålet udelukkende har fokus på det traditionelle samfund, da det dermed bliver svært at inddrage samfundsfag i besvarelsen."
 }, {
     "Nogleproblem": "Identitetsdannelse",
     "Problemformulering": "Hvad betyder kirken for unges identitetsdannelse?",
     "Korrekt": false,
-    "Feedback": " Der fokuseres for meget på kun et element med betydning for ungdommen. Det gør problemformuleringen for begrænset. Det bliver svært at inddrage alle tre fag i tilstrækkeligt omfang. Det kunne også være en fordel, hvis den i højere grad lagde op til at sammenligne eller se forskelle ift. det traditionelle- moderne- eller senmoderne samfund."
+    "Feedback": "Problemformuleringen lægger ikke op til at inddrage alle tre fag. Den henvender sig primært til religion. <br/>Den kunne forbedres, hvis den fx lagde op til at sammenligne unges identitetsdannelse i det traditionelle, moderne, og senmoderne samfund. Når man sammenligner, vil man naturligt skulle diskutere og vurdere de forskellige samfundstyper."
 }, {
-    "Nogleproblem": "Samfundsskabt ulighed",
+    "Nogleproblem": "Frihed og lighed",
 
     "Problemformulering": "Kan den danske velfærdsstat bestå i sin nuværende form?",
     "Korrekt": true,
@@ -39,15 +39,15 @@
 
     "Problemformulering": "Hvorfor er der ulighed?",
     "Korrekt": false,
-    "Feedback": " Den bliver for bred og ufokuseret. Hvad er det for en ulighed, man vil undersøge? Er det økonomisk, politisk eller kønsmæssigt? Er det i Danmark, Europa eller USA? Det er vigtigt, at det er helt klart i problemformuleringen, hvad det er man vil undersøge, forklare og besvare."
+    "Feedback": "Problemformuleringen er for bred og ufokuseret. Hvad er det for en ulighed, man vil undersøge? Er det økonomisk, politisk, eller i forhold til køn? Er det i Danmark, Europa eller USA? Det er vigtigt, at det fremgår tydeligt, hvad det er, man vil undersøge og besvare."
 }, {
     "Nogleproblem": "Samfundsskabt ulighed",
 
     "Problemformulering": "Hvorfor vil nogle skabe ulighed og dermed skabe et uharmonisk samfund?",
     "Korrekt": false,
-    "Feedback": " Den er for værdiladet idet den antager, at ulighed automatisk skaber et uharmonisk samfund. Det er vigtigt, at problemformuleringen ikke på forhånd lægger op til en bestemt konklusion."
+    "Feedback": "En problemformulering må ikke på forhånd lægge op til en bestemt konklusion eller være værdiladet. Og her antages det, at ulighed automatisk skaber et uharmonisk samfund."
 }, {
-    "Nogleproblem": "Samfundsskabt ulighed",
+    "Nogleproblem": "Frihed og lighed",
 
     "Problemformulering": "Hvorfor er velfærdsmodellerne i Danmark og USA så forskellige, og hvordan kan disse to systemer udvikle sig i fremtiden?",
     "Korrekt": true,
@@ -57,29 +57,23 @@
 
     "Problemformulering": "Hvorfor var det nødvendigt for regimerne i det 20. århundredes Tyskland at anvende fjendebilleder til erobring og fastholdelse af magten?",
     "Korrekt": true,
-    "Feedback": "Den er klar og præcis. Der er tale om en naturlig undren over, at disse to styreformer helt åbenlyst benyttede fjendebilleder."
+    "Feedback": "Problemformuleringen er præcis og tilpas afgrænset, men samtidig bred nok til at bringe alle tre fag i spil. Og den åbner op for en diskussion af de to regimers åbenlyse brug af fjendebilleder."
 },{
     "Nogleproblem": "Tyskland",
 
     "Problemformulering": "Hvilken betydning fik den økonomiske situation i Tyskland i mellemkrigstiden for Hitlers magtovertagelse?",
     "Korrekt": false,
-    "Feedback": " Det er vigtigt, at problemformuleringens fokus ikke bliver for ensidig til fordel for ét eller måske to fag, men naturligt kan bringe alle tre fag i spil."
+    "Feedback": "Det er vigtigt, at problemformuleringen bringer alle tre fag i spil. Fokus i denne problemformulering er for ensidigt. Spørgsmålet henvender sig primært til historie og samfundsfag. Religion kan ikke bidrage til en problemformulering, der udelukkende fokuserer på økonomi."
 },{
     "Nogleproblem": "Tyskland",
 
-    "Problemformulering": "Hvorfor kom Hitler til magten, og hvorfor blev Tyskland delt efter krigen, herunder: Hvordan kan det være at den ene del af Tyskland blev Kommunistisk efter krigen, når nu man havde dårlige erfaringer med en totalitær styreform under Hitler regimet?",
+    "Problemformulering": "Hvorfor kom Hitler til magten, og hvorfor blev Tyskland delt efter krigen, herunder: Hvordan kan det være, at den ene del af Tyskland blev kommunistisk efter krigen, når nu man havde dårlige erfaringer med en totalitær styreform under Hitler-regimet?",
     "Korrekt": false,
-    "Feedback": " Den er for svær at besvare, da der er alt for mange forhold, man vil undersøge. <br/>Man skal huske at hele problemformuleringen skal besvares dybdegående. I denne problemformulering er der tre omfangsrige spørgsmål, som alle skal besvares."
-},{
-    "Nogleproblem": "Det gode samfund",
-
-    "Problemformulering": "Den danske velfærdsstat. Velfærdsstatens historie religiøst. Danmarks nuværende udfordringer politisk",
-    "Korrekt": false,
-    "Feedback": "Den indeholder ikke et konkret undersøgende spørgsmål, som forholder sig til det overordnede emne."
+    "Feedback": "Problemformuleringen mangler fokus og er alt for bred. Den indeholder tre omfangsrige spørgsmål, som man vil få svært ved at besvare fyldestgørende ved eksamen. Desuden lægger den ikke umiddelbart op til at inddrage religion."
 },{
     "Nogleproblem": "Kulturmøder",
 
-    "Problemformulering": "Begrebet kulturmøde bygger på, at to folkefærd med vidt forskellige skikke, traditioner, sprog hvis ikke også religion eller i hvert fald perspektiv på religion, madvaner, kunstvaner, etik og moral og måske endda også verdenssyn. Alt hvad der menes bygger en kultur op, mødes og måske endda også bor side om side lever dag til dag sammen med hinanden.",
+    "Problemformulering": "Begrebet kulturmøde bygger på, at to folkefærd med vidt forskellige skikke, traditioner, sprog, religion, madvaner, kunstvaner, etik og moral og måske endda også verdenssyn. Alt hvad der bygger en kultur op, og bor side om side.",
     "Korrekt": false,
     "Feedback": "Den indeholder ikke et konkret undersøgende spørgsmål, som forholder sig til det overordnede emne."
 },{
@@ -88,4 +82,34 @@
     "Problemformulering": "Hvad er et kulturmøde?",
     "Korrekt": false,
     "Feedback": "Den er ikke specifik nok og indeholder ikke en reel problemstilling. Den er kun på redegørende niveau."
+},{
+    "Nogleproblem": "Tyskland",
+
+    "Problemformulering": "Hvilken rolle har anvendelsen af fjendebilleder haft for den politiske magtudøvelse i det 20. århundredes Tyskland, og kan man drage paralleller til nutidens højredrejning i Tyskland?",
+    "Korrekt": true,
+    "Feedback": "Problemformuleringen har et klart fokus og indeholder en reel undren, som kan bringe alle tre fag i spil. Problemformuleringen lægger desuden op til diskussion og vurdering af forskelle og ligheder mellem datidens og nutidens Tyskland."
+},{
+    "Nogleproblem": "Frihed og lighed",
+
+    "Problemformulering": "Hvorfor er der så forskellige værdier og idealer i det amerikanske og det danske samfund, og hvad er det gode samfund?",
+    "Korrekt": true,
+    "Feedback": "Problemformuleringen indeholder en reel undren og har et klart fokus på “værdier og idealer”, som naturligt bringer alle tre fag i spil. Samtidig sammenligner den USA og Danmark, hvilket gør det muligt at nå et diskuterende og vurderende niveau."
+},{
+    "Nogleproblem": "Kina",
+
+    "Problemformulering": "Når nu de kommunistiske regimer er faldet i det meste af verden, hvorfor er det så lykkedes KKP at fastholde magten i Kina - og kan KKP bevare magten i fremtiden?",
+    "Korrekt": true,
+    "Feedback": "Problemformuleringen indeholder et paradoks, der sikrer et diskuterende og vurderende niveau. Samtidig har den et klart og afgrænset fokus på KKP, og alle tre fag kan bringes i spil i besvarelsen."
+},{
+    "Nogleproblem": "Kina",
+
+    "Problemformulering": "Hvad er “Det store spring fremad”, og hvorfor gik det galt?",
+    "Korrekt": false,
+    "Feedback": "“Hvad-spørgsmålet” lægger kun op til at beskrive eller redegøre for noget. Og det efterfølgende “hvorfor-spørgsmål” lægger ikke op til at inddrage alle tre fag. Problemformuleringen har et for ensidigt fokus på en historisk begivenhed."
+},{
+    "Nogleproblem": "Kina",
+
+    "Problemformulering": "Hvad mente Mao om befolkningen, og hvorfor var de så dumme at tilslutte sig KKP?",
+    "Korrekt": false,
+    "Feedback": "Problemformuleringen bliver for afgrænset og åbner ikke tilstrækkeligt op for inddragelse af viden fra de tre fag. Samtidig er sætningen “hvorfor var de så dumme at tilslute sig KKP?” for værdiladet, dermed lægger problemformuleringen op til, at der på forhånd er draget en konklusion på spørgsmålet."
 }]
