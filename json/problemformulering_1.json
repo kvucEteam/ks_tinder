@@ -2,17 +2,17 @@
     "Nogleproblem": "Flygtninge, fjendebilleder, kulturmøde og integration",
     "Problemformulering": "Er fjendebilleder et produkt af samfundstendenser eller betragter Islam og vesten entydigt hinanden som fjender?",
     "Korrekt": true,
-    "Feedback": "Problemformuleringen indeholder en reel undren, hvilket åbner op for diskussion og vurdering. Samtidig lægger den op til at bringe alle tre fag i spil.  “Entydigt” sigter fx mod både historiefaget og religion, og “samfundstendenser” sigter mod alle tre fag."
+    "Feedback": "Problemformuleringen indeholder en reel undren, hvilket åbner op for diskussion og vurdering. Samtidig lægger den op til at bringe alle tre fag i spil.  <em>Entydigt</em>  sigter fx både mod historiefaget og religion, og <em>samfundstendenser</em> sigter mod alle tre fag."
 }, {
     "Nogleproblem": "Flygtninge, fjendebilleder, kulturmøde og integration",
     "Problemformulering": "Hvorfor er der krig mellem Islam og Vesten?",
     "Korrekt": false,
-    "Feedback": "Problemformuleringen er for bred og upræcis. Hvad er Vesten? Og er der krig mellem alle muslimer og hele Vesten? Problemformuleringen indeholder et postulat, som der ikke er dækning for."
+    "Feedback": "Problemformuleringen er for bred og upræcis. Hvad er Vesten? Og er der virkelig krig mellem alle muslimer og hele Vesten? Problemformuleringen indeholder et postulat, som der ikke er dækning for."
 }, {
     "Nogleproblem": "Flygtninge, fjendebilleder, kulturmøde og integration",
     "Problemformulering": "Hvordan har Islam udviklet sig i verdenssamfundet?",
     "Korrekt": false,
-    "Feedback": "Problemformuleringen er for bred og upræcis, og den bliver derfor svær at besvare. Hvad er fx verdenssamfundet? Desuden lægger “hvordan-spørgsmålet” op til at beskrive eller undersøge en udvikling. Det lægger ikke op til at diskutere eller vurdere noget."
+    "Feedback": "Problemformuleringen er for bred og upræcis, og den er derfor svær at besvare. Hvad er fx verdenssamfundet? Desuden lægger “hvordan-spørgsmålet” op til at beskrive eller undersøge en udvikling. Det lægger ikke op til at diskutere eller vurdere noget."
 }, {
     "Nogleproblem": "Identitetsdannelse",
     "Problemformulering": "Er det lettere at være ung i det senmoderne samfund end det var i det traditionelle samfund?",
@@ -27,7 +27,7 @@
     "Nogleproblem": "Identitetsdannelse",
     "Problemformulering": "Hvad betyder kirken for unges identitetsdannelse?",
     "Korrekt": false,
-    "Feedback": "Problemformuleringen lægger ikke op til at inddrage alle tre fag. Den henvender sig primært til religion. <br/>Den kunne forbedres, hvis den fx lagde op til at sammenligne unges identitetsdannelse i det traditionelle, moderne, og senmoderne samfund. Når man sammenligner, vil man naturligt skulle diskutere og vurdere de forskellige samfundstyper."
+    "Feedback": "Problemformuleringen lægger ikke op til at inddrage alle tre fag. Den henvender sig primært til religion. Den kunne forbedres, hvis den fx lagde op til at sammenligne unges identitetsdannelse i det traditionelle, moderne, og senmoderne samfund. Når man sammenligner, vil man naturligt skulle diskutere og vurdere de forskellige samfundstyper."
 }, {
     "Nogleproblem": "Frihed og lighed",
 
@@ -111,5 +111,5 @@
 
     "Problemformulering": "Hvad mente Mao om befolkningen, og hvorfor var de så dumme at tilslutte sig KKP?",
     "Korrekt": false,
-    "Feedback": "Problemformuleringen bliver for afgrænset og åbner ikke tilstrækkeligt op for inddragelse af viden fra de tre fag. Samtidig er sætningen “hvorfor var de så dumme at tilslute sig KKP?” for værdiladet, dermed lægger problemformuleringen op til, at der på forhånd er draget en konklusion på spørgsmålet."
+    "Feedback": "Problemformuleringen er for afgrænset og åbner ikke tilstrækkeligt op for inddragelse af viden fra de tre fag. Samtidig er spørgsmålet: “Hvorfor var de så dumme at tilslutte sig KKP?” meget værdiladet. Dette skal man undgå, når man laver problemformuleringer."
 }]
