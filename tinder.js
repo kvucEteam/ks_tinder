@@ -233,6 +233,8 @@ function btn_click(class_type) {
 
     if (jsonData[runde].Korrekt == user_select) {
         correct_sound();
+         score++;
+                console.log("Score: " + score + " length: " + jsonData.length);
     } else {
         error_sound();
     }
