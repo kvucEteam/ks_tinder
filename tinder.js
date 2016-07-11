@@ -11,10 +11,10 @@ var score = 0;
 $(document).ready(function() {
 
     if (jsonData[0].Konklusion) {
-        $(".instr_container").html(instruction("Du skal vurdere konklusionen og trække kortet til højre, hvis den er god og til venstre, hvis den er dårlig."));
+        $(".instr_container").html(instruction("Du skal vurdere konklusionen og trække kortet til <span class='label label-success'>højre</span> hvis den er god og til <span class='label label-danger'>venstre</span> hvis den er dårlig."));
         opg_type = "konklusion";
     } else {
-        $(".instr_container").html(instruction("Du skal vurdere problemformuleringen og trække kortet til højre, hvis den er god og til venstre, hvis den er dårlig."));
+        $(".instr_container").html(instruction("Du skal vurdere problemformuleringen og trække kortet til <span class='label label-success'>højre</span> hvis den er god og til <span class='label label-danger'>venstre</span> hvis den er dårlig."));
         opg_type = "problemformulering"
         shuffle_Array(jsonData);
         //$(".tinder_container").css("height", "750px");
@@ -79,9 +79,9 @@ function generateHTML() {
 
         $(".tinder_container").append("<div class='text_container tinder_card card_" + i + "'></div>");
         if (opg_type == "problemformulering") {
-            $(".tinder_card").eq(i).html("<p class='card_header'><b>Nøgleproblem:</b> " + jsonData[i].Nogleproblem + "</p><p class='card_text'>''" + jsonData[i].Problemformulering + "''</p><div class='txt_vurdering'></div>");
+            $(".tinder_card").eq(i).html("<p class='card_header'><b>Emne:</b> ''" + jsonData[i].Nogleproblem + "''</p><p class='card_text'>" + jsonData[i].Problemformulering + "</p><div class='txt_vurdering'></div>");
         } else {
-            $(".tinder_card").eq(i).html("<p class='card_header card_header_konkl'><b>Problemformulering:</b> ''" + jsonData[i].Problemformulering + "''</p><p class='card_text_konkl'></p><p class='card_text_konkl'>''" + jsonData[i].Konklusion + "''</p><div class='txt_vurdering'></div>");
+            $(".tinder_card").eq(i).html("<p class='card_header card_header_konkl'><b>Problemformulering:</b> ''" + jsonData[i].Problemformulering + "''</p><p class='card_text_konkl'></p><p class='card_text_konkl'>" + jsonData[i].Konklusion + "</p><div class='txt_vurdering'></div>");
         }
         $(".tinder_card").eq(i).css("z-index", 20 - i);
         $(".tinder_card").eq(i).css("margin-top", i * 7);
@@ -236,6 +236,8 @@ function btn_click(class_type) {
 
     if (jsonData[runde].Korrekt == user_select) {
         correct_sound();
+         score++;
+                console.log("Score: " + score + " length: " + jsonData.length);
     } else {
         error_sound();
     }
