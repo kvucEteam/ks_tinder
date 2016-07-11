@@ -109,6 +109,7 @@ function makeDraggable() {
                 $(this).css({
                     '-moz-transform': 'rotate(0deg)',
                     '-webkit-transform': 'rotate(0deg)',
+                    'transform': 'rotate(45deg)'  /* Newer browsers (incl IE9) */
                 });
 
                 $(".txt_vurdering").eq(0).css("opacity", 0);
@@ -133,7 +134,9 @@ function makeDraggable() {
             //console.log("offset: " + $(this).offset().left);
             $(this).css({
                 '-moz-transform': rotateCSS,
-                '-webkit-transform': rotateCSS
+                '-webkit-transform': rotateCSS,
+                'transform':rotateCSS
+
             });
         },
         stop: function(event, ui) {
@@ -237,10 +240,6 @@ function btn_click(class_type) {
         error_sound();
     }
 
-    $(".tinder_card").eq(0).css({
-        '-moz-transform': 'rotate(' + rotate + 'deg)',
-        '-webkit-transform': 'rotate(' + rotate + 'deg)',
-    });
 
     $(".tinder_card").eq(0).animate({
         left: pos,
