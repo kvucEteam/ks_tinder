@@ -20,6 +20,8 @@ $(document).ready(function() {
         //$(".tinder_container").css("height", "750px");
     }
 
+$( ".instr_container").find("div").removeClass("col-md-8"); 
+
     console.log(typeof(runde));
     enable_audio();
     generateHTML();
