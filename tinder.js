@@ -20,12 +20,13 @@ $(document).ready(function() {
         //$(".tinder_container").css("height", "750px");
     }
 
-$( ".instr_container").find("div").removeClass("col-md-8"); 
+    $(".instr_container").find("div").removeClass("col-md-8");
 
     console.log(typeof(runde));
     enable_audio();
     generateHTML();
     updateStack();
+
     $(".btn_no, .btn_yes").click(function() {
         console.log(this);
         var class_type = $(this).attr("class").split(' ')[4];
@@ -111,7 +112,7 @@ function makeDraggable() {
                 $(this).css({
                     '-moz-transform': 'rotate(0deg)',
                     '-webkit-transform': 'rotate(0deg)',
-                    'transform': 'rotate(45deg)'  /* Newer browsers (incl IE9) */
+                    'transform': 'rotate(0deg)' /* Newer browsers (incl IE9) */
                 });
 
                 $(".txt_vurdering").eq(0).css("opacity", 0);
@@ -137,7 +138,7 @@ function makeDraggable() {
             $(this).css({
                 '-moz-transform': rotateCSS,
                 '-webkit-transform': rotateCSS,
-                'transform':rotateCSS
+                'transform': rotateCSS
 
             });
         },
@@ -203,24 +204,23 @@ function updateStack() {
         slutFeedback();
     }
 
-          var scrollheight = $(".tinder_card").eq(0)[0].scrollHeight;
-          var innerheight = $(".tinder_card").eq(0).innerHeight();
+    var scrollheight = $(".tinder_card").eq(0)[0].scrollHeight;
+    var innerheight = $(".tinder_card").eq(0).innerHeight();
 
-            if (scrollheight > innerheight){  
+    if (scrollheight > innerheight) {
 
-                jQuery(function($) {
-                $('.tinder_card').eq(0).on('scroll', function() {
-                    console.log("Runde: " + runde + " SH: " + scrollheight + "IH : " + innerheight + " scrolltop:  " + $(".tinder_card").scrollTop());
-                    if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
-                      makeDraggable();
-                      //alert('end reached');
-                    }
-                })
-            });
-        }else{
+        jQuery(function($) {
+            $('.tinder_card').eq(0).on('scroll', function() {
+                console.log("Runde: " + runde + " SH: " + scrollheight + "IH : " + innerheight + " scrolltop:  " + $(".tinder_card").scrollTop());
+                if ($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
+                    makeDraggable();
+                    //alert('end reached');
+                }
+            })
+        });
+    } else {
         makeDraggable();
-        }
-    
+    }
 }
 
 function btn_click(class_type) {
@@ -238,8 +238,8 @@ function btn_click(class_type) {
 
     if (jsonData[runde].Korrekt == user_select) {
         correct_sound();
-         score++;
-                console.log("Score: " + score + " length: " + jsonData.length);
+        score++;
+        console.log("Score: " + score + " length: " + jsonData.length);
     } else {
         error_sound();
     }
@@ -280,5 +280,3 @@ function slutFeedback() {
         location.reload();
     });
 }
-
-
